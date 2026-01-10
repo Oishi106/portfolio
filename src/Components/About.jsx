@@ -7,7 +7,7 @@ function About() {
       id="about"
       className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 py-20 md:flex-row md:gap-16 md:px-8 overflow-hidden"
     >
-      {/* Left side: Animated gear system */}
+      
       {/* Left side: Animated gear system */}
       <div className="flex flex-1 items-center justify-center">
         <div className="about-gear-container relative flex h-80 w-80 items-center justify-center md:h-96 md:w-96">
@@ -34,6 +34,7 @@ function About() {
               <div className="about-gear about-gear-4">
                 <div className="about-gear-inner" />
               </div>
+
 
               {/* Connection lines */}
               <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
