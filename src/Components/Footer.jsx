@@ -52,7 +52,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Mahmuda Afroz. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Mahamuda Afroz Oishi. All rights reserved.</p>
         </div>
       </div>
     </motion.footer>

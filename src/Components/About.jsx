@@ -7,9 +7,15 @@ function About() {
       id="about"
       className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 py-20 md:flex-row md:gap-16 md:px-8 overflow-hidden"
     >
-      
       {/* Left side: Animated gear system */}
-      <div className="flex flex-1 items-center justify-center">
+      <motion.div 
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.3 }}
+        className="flex flex-1 items-center justify-center"
+      >
         <div className="about-gear-container relative flex h-80 w-80 items-center justify-center md:h-96 md:w-96">
           {/* Monitor frame */}
           <div className="about-monitor absolute z-10 h-full w-full rounded-lg border-2 border-cyan-400/50 bg-slate-900/60 backdrop-blur-sm shadow-[0_0_30px_rgba(34,211,238,0.3)]">
@@ -34,7 +40,6 @@ function About() {
               <div className="about-gear about-gear-4">
                 <div className="about-gear-inner" />
               </div>
-
 
               {/* Connection lines */}
               <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -93,7 +98,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Right side: Description */}
       <motion.div 

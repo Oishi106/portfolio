@@ -1,32 +1,28 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 
 const Projects = () => {
   const projects = [
+
+    
+   
     {
       id: 1,
-      title: 'Skill-exchange',
-      description: 'The purpose of SkillSwap is to connect learners with local skill providers. Whether it’s guitar lessons, language practice, coding help, or yoga sessions, SkillSwap helps users find the right skill provider and book a session easily.',
-      link: 'https://skill-exchange44455.netlify.app/',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop'
-    },
-    {
-      id: 2,
       title: 'Local Food',
       description: 'Local Food Lovers Network is a full-stack web application designed for food enthusiasts who enjoy exploring restaurants, street foods, and homemade dishes. Users can register, post reviews, manage their favorites, and view reviews from others in an engaging and responsive UI.',
       link: 'https://ornate-sunshine-8ba480.netlify.app/',
       tags: ['MERN', 'Firebase', 'Tailwind'],
       image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop'
     },
-    {
-      id: 3,
-      title: 'hero.io',
-      description: 'At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.',
-      link: 'https://heroi0.netlify.app/',
-      tags: ['React', 'Innovation', 'Apps'],
-      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop'
-    }
+     {
+      id: 2,
+      title: 'Skill-exchange',
+      description: 'The purpose of SkillSwap is to connect learners with local skill providers. Whether it’s guitar lessons, language practice, coding help, or yoga sessions, SkillSwap helps users find the right skill provider and book a session easily.',
+      link: 'https://skill-exchange44455.netlify.app/',
+      tags: ['React', 'Node.js', 'MongoDB'],
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop'
+    },
+   
   ];
 
   return (

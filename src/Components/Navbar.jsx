@@ -79,12 +79,7 @@ function Navbar() {
               {activeSection === item.id && (
                 <motion.div
                   layoutId="active-pill"
-                  className="absolute inset-0 rounded-full border-2"
-                  style={{
-                    background: 'radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.4), transparent 60%), linear-gradient(135deg, #020617, #020617)',
-                    borderColor: 'rgba(56, 189, 248, 0.7)',
-                    boxShadow: '0 14px 32px rgba(15, 23, 42, 0.9), 0 0 22px rgba(56, 189, 248, 0.65)'
-                  }}
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-600/40 to-blue-600/40 border border-cyan-500/30 shadow-[0_0_20px_rgba(8,145,178,0.3)]"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}

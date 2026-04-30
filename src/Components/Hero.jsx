@@ -1,6 +1,8 @@
 import profileImg from '../assets/original.jpeg'
 import { motion } from 'framer-motion';
 
+const cvDownloadUrl = 'https://drive.google.com/uc?export=download&id=1Hobo2EirWb1P00-CCLK2Zk-2o0E_FQ98';
+
 function Hero() {
   return (
     <main id="home" className="relative z-10 mt-16 px-4 md:px-8 overflow-hidden">
@@ -34,14 +36,17 @@ function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-            <motion.button
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              type="button"
+              href={cvDownloadUrl}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-cyan-400 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-400/40 transition hover:bg-cyan-300"
             >
               Download CV
-            </motion.button>
+            </motion.a>
             <span className="text-xs font-medium uppercase tracking-[0.25em] text-emerald-300/80">
               AVAILABLE FOR OPPORTUNITIES
             </span>
