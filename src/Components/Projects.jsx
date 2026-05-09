@@ -9,15 +9,23 @@ const Projects = () => {
       description: 'A full-stack Learning Management System for purchasing courses and tracking study progress with a seamless, secure user experience. Users can securely log in using Google or email authentication with protected sessions via NextAuth, track courses and progress, purchase courses with secure payments for instant access, and interact with an AI study assistant for instant 24/7 help with course-related questions.',
       link: 'https://lms-client-ne5a.vercel.app/',
       tags: ['Next.js', 'TypeScript', 'NextAuth', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop'
+      image: 'https://i.ibb.co.com/Hf3b7kZ7/skill-Forge.png'
     },
+       {
+      id: 5,
+      title: 'Care Connect – Healthcare Appointment Platform',
+      description: 'A full-stack healthcare appointment booking platform that connects patients with healthcare providers seamlessly. Users can register with secure authentication via NextAuth, browse and book appointments with doctors, manage their medical appointments, make secure payments via Stripe for consultation fees, and receive appointment reminders for better healthcare management.',
+      link: 'https://care-connect-client-eight.vercel.app/',
+      tags: ['Next.js', 'JavaScript', 'NextAuth', 'Stripe'],
+      image: 'https://i.ibb.co.com/KcDHk36H/care.png'
+    }, 
     {
       id: 2,
       title: 'StyleDecor – Decoration Service Booking Platform',
       description: 'A full-stack MERN platform for booking home and ceremony decoration services with real-time status tracking. Users can securely log in with role-based accounts using Firebase and JWT, book decoration services, track project progress, see assigned decorators in real time, and make secure payments via Stripe while managing bookings through their dashboards.',
       link: 'https://stupendous-axolotl-7347a9.netlify.app/',
       tags: ['React.js', 'TailwindCSS', 'Firebase', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1000&auto=format&fit=crop'
+      image: 'https://i.ibb.co.com/HLFD52kC/style-decor-logo.png'
     },
     {
       id: 3,
@@ -34,7 +42,7 @@ const Projects = () => {
       link: 'https://skill-exchange44455.netlify.app/',
       tags: ['React', 'Node.js', 'MongoDB'],
       image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop'
-    },
+    },   
    
   ];
 
