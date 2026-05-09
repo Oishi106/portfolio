@@ -23,7 +23,7 @@ const Projects = () => {
       id: 2,
       title: 'StyleDecor – Decoration Service Booking Platform',
       description: 'A full-stack MERN platform for booking home and ceremony decoration services with real-time status tracking. Users can securely log in with role-based accounts using Firebase and JWT, book decoration services, track project progress, see assigned decorators in real time, and make secure payments via Stripe while managing bookings through their dashboards.',
-      link: 'https://stupendous-axolotl-7347a9.netlify.app/',
+      link: 'https://stupendous-axolotl-7347a9.netlify.app/',                    
       tags: ['React.js', 'TailwindCSS', 'Firebase', 'Stripe'],
       image: 'https://i.ibb.co.com/HLFD52kC/style-decor-logo.png'
     },
@@ -31,13 +31,13 @@ const Projects = () => {
       id: 3,
       title: 'Local Food',
       description: 'Local Food Lovers Network is a full-stack web application designed for food enthusiasts who enjoy exploring restaurants, street foods, and homemade dishes. Users can register, post reviews, manage their favorites, and view reviews from others in an engaging and responsive UI.',
-      link: 'https://ornate-sunshine-8ba480.netlify.app/',
+      link: 'https://ornate-sunshine-8ba480.netlify.app/',                  
       tags: ['MERN', 'Firebase', 'Tailwind'],
       image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop'
     },
      {
       id: 4,
-      title: 'Skill-exchange',
+      title: 'Skill-exchange',                                 
       description: 'The purpose of SkillSwap is to connect learners with local skill providers. Whether it’s guitar lessons, language practice, coding help, or yoga sessions, SkillSwap helps users find the right skill provider and book a session easily.',
       link: 'https://skill-exchange44455.netlify.app/',
       tags: ['React', 'Node.js', 'MongoDB'],
