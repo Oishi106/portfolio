@@ -9,7 +9,7 @@ const Projects = () => {
       description: 'A full-stack Learning Management System for purchasing courses and tracking study progress with a seamless, secure user experience. Users can securely log in using Google or email authentication with protected sessions via NextAuth, track courses and progress, purchase courses with secure payments for instant access, and interact with an AI study assistant for instant 24/7 help with course-related questions.',
       link: 'https://lms-client-ne5a.vercel.app/',
       tags: ['Next.js', 'TypeScript', 'NextAuth', 'Stripe'],
-      image: 'https://i.ibb.co.com/Hf3b7kZ7/skill-Forge.png'
+      image: 'https://i.ibb.co.com/bgw6wnFG/sss.jpg'
     },
        {
       id: 5,
