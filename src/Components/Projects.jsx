@@ -17,7 +17,7 @@ const Projects = () => {
       description: 'A full-stack healthcare appointment booking platform that connects patients with healthcare providers seamlessly. Users can register with secure authentication via NextAuth, browse and book appointments with doctors, manage their medical appointments, make secure payments via Stripe for consultation fees, and receive appointment reminders for better healthcare management.',
       link: 'https://care-connect-client-eight.vercel.app/',
       tags: ['Next.js', 'JavaScript', 'NextAuth', 'Stripe'],
-      image: 'https://i.ibb.co.com/KcDHk36H/care.png'
+      image: 'https://i.ibb.co.com/sp7JLZDd/cc.png'
     }, 
     {
       id: 2,
@@ -31,9 +31,9 @@ const Projects = () => {
       id: 3,
       title: 'Local Food',
       description: 'Local Food Lovers Network is a full-stack web application designed for food enthusiasts who enjoy exploring restaurants, street foods, and homemade dishes. Users can register, post reviews, manage their favorites, and view reviews from others in an engaging and responsive UI.',
-      link: 'https://ornate-sunshine-8ba480.netlify.app/',                  
+      link: 'https://local-food-client.vercel.app/',                  
       tags: ['MERN', 'Firebase', 'Tailwind'],
-      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop'
+      image: 'https://i.ibb.co.com/6Rz2YrtJ/ff.png'
     },
      {
       id: 4,
