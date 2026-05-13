@@ -39,7 +39,7 @@ const Projects = () => {
       id: 4,
       title: 'Skill-exchange',                                 
       description: 'The purpose of SkillSwap is to connect learners with local skill providers. Whether it’s guitar lessons, language practice, coding help, or yoga sessions, SkillSwap helps users find the right skill provider and book a session easily.',
-      link: 'https://skill-exchange44455.netlify.app/',
+      link: 'https://mellow-otter-666845.netlify.app/',
       tags: ['React', 'Node.js', 'MongoDB'],
       image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop'
     },   
