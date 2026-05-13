@@ -17,7 +17,7 @@ const Projects = () => {
       description: 'A full-stack healthcare appointment booking platform that connects patients with healthcare providers seamlessly. Users can register with secure authentication via NextAuth, browse and book appointments with doctors, manage their medical appointments, make secure payments via Stripe for consultation fees, and receive appointment reminders for better healthcare management.',
       link: 'https://care-connect-client-eight.vercel.app/',
       tags: ['Next.js', 'JavaScript', 'NextAuth', 'Stripe'],
-      image: 'care-connect.png'
+      image: 'care.png'
     }, 
     {
       id: 2,
