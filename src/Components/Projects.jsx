@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'SkillForge – Learning Management System (LMS)',
+      title: 'Skill Forge – Learning Management System (LMS)',
       description: 'A full-stack Learning Management System for purchasing courses and tracking study progress with a seamless, secure user experience. Users can securely log in using Google or email authentication with protected sessions via NextAuth, track courses and progress, purchase courses with secure payments for instant access, and interact with an AI study assistant for instant 24/7 help with course-related questions.',
       link: 'https://lms-client-ne5a.vercel.app/',
       tags: ['Next.js', 'TypeScript', 'NextAuth', 'Stripe'],
@@ -21,7 +21,7 @@ const Projects = () => {
     }, 
     {
       id: 2,
-      title: 'StyleDecor – Decoration Service Booking Platform',
+      title: 'Style Decor – Decoration Service Booking Platform',
       description: 'A full-stack MERN platform for booking home and ceremony decoration services with real-time status tracking. Users can securely log in with role-based accounts using Firebase and JWT, book decoration services, track project progress, see assigned decorators in real time, and make secure payments via Stripe while managing bookings through their dashboards.',
       link: 'https://stupendous-axolotl-7347a9.netlify.app/',                    
       tags: ['React.js', 'TailwindCSS', 'Firebase', 'Stripe'], 
@@ -29,7 +29,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'FoodNest – Food Lovers Network',
+      title: 'Food Nest – Food Lovers Network',
       description: 'Local Food Lovers Network is a full-stack web application designed for food enthusiasts who enjoy exploring restaurants, street foods, and homemade dishes. Users can register, post reviews, manage their favorites, and view reviews from others in an engaging and responsive UI.',
       link: 'https://local-food-client.vercel.app/',                  
       tags: ['MERN', 'Firebase', 'Tailwind'],
@@ -37,7 +37,7 @@ const Projects = () => {
     },
      {
       id: 4,
-      title: 'Skill-swap – Skill Sharing Platform',                                 
+      title: 'Skill swap – Skill Sharing Platform',                                 
       description: 'The purpose of SkillSwap is to connect learners with local skill providers. Whether it’s guitar lessons, language practice, coding help, or yoga sessions, SkillSwap helps users find the right skill provider and book a session easily.',
       link: 'https://mellow-otter-666845.netlify.app/',
       tags: ['React', 'Node.js', 'MongoDB'],
