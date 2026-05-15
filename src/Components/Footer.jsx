@@ -23,7 +23,7 @@ const Footer = () => {
     },
     {
       icon: FaFacebook,
-      link: "https://facebook.com",
+      link: "https://www.facebook.com/mahmudaafroz.oishi",
     },
   ];
 
