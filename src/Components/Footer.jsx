@@ -43,31 +43,36 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-[#020617] border-t border-white/10">
+    <footer className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#020617] border-t border-white/10">
+      
       {/* Background Glow */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full top-[-100px] left-[-100px]" />
-        <div className="absolute w-72 h-72 bg-blue-500/10 blur-3xl rounded-full bottom-[-100px] right-[-100px]" />
+      <div className="absolute inset-0">
+        <div className="absolute w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full -top-32 -left-32"></div>
+
+        <div className="absolute w-80 h-80 bg-blue-500/10 blur-3xl rounded-full -bottom-32 -right-32"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-16">
-        {/* Top Section */}
-        <div className="grid lg:grid-cols-3 gap-12 pb-14 border-b border-white/10">
-          
-          {/* Brand */}
+      {/* Main Content */}
+      <div className="relative w-full px-6 md:px-10 lg:px-16 xl:px-24 py-16">
+        
+        {/* Top Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 pb-14 border-b border-white/10">
+
+          {/* Brand Section */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Mahamuda Afroz <span className="text-cyan-400">Oishi</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Mahamuda Afroz{" "}
+              <span className="text-cyan-400">Oishi</span>
             </h2>
 
-            <p className="text-slate-400 leading-relaxed mb-6">
-              Passionate Full Stack Developer creating modern, responsive and
-              user-friendly web applications with beautiful UI & smooth user
-              experience.
+            <p className="text-slate-400 leading-relaxed max-w-md mb-7">
+              Passionate Full Stack Developer focused on creating modern,
+              responsive and interactive web experiences with beautiful UI
+              and smooth user experience.
             </p>
 
             {/* Social Icons */}
@@ -81,10 +86,11 @@ const Footer = () => {
                     href={social.link}
                     target="_blank"
                     rel="noreferrer"
-                    whileHover={{ y: -5 }}
-                    className="w-11 h-11 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all duration-300"
+                    whileHover={{ y: -5, scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all duration-300"
                   >
-                    <Icon />
+                    <Icon className="text-lg" />
                   </motion.a>
                 );
               })}
@@ -93,63 +99,68 @@ const Footer = () => {
 
           {/* Navigation */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="lg:mx-auto"
           >
-            <h3 className="text-xl font-semibold text-white mb-6">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               Navigation
             </h3>
 
             <div className="grid grid-cols-2 gap-4">
               {navLinks.map((item, i) => (
-                <a
+                <motion.a
                   key={i}
                   href={item.href}
-                  className="text-slate-400 hover:text-cyan-400 transition-all duration-300 hover:translate-x-1"
+                  whileHover={{ x: 5 }}
+                  className="text-slate-400 hover:text-cyan-400 transition-all duration-300"
                 >
                   {item.name}
-                </a>
+                </motion.a>
               ))}
             </div>
           </motion.div>
 
           {/* Contact */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-xl font-semibold text-white mb-6">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               Contact
             </h3>
 
             <div className="space-y-5">
+              {/* Email */}
               <div className="flex items-start gap-3">
-                <FaEnvelope className="text-cyan-400 mt-1" />
+                <FaEnvelope className="text-cyan-400 mt-1 text-lg" />
+
                 <a
                   href="mailto:mahmudaoishi457@gmail.com"
-                  className="text-slate-400 hover:text-cyan-400 transition-all"
+                  className="text-slate-400 hover:text-cyan-400 transition-all duration-300 break-all"
                 >
                   mahmudaoishi457@gmail.com
                 </a>
               </div>
 
+              {/* Location */}
               <div className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-cyan-400 mt-1" />
+                <FaMapMarkerAlt className="text-cyan-400 mt-1 text-lg" />
+
                 <p className="text-slate-400">
                   Dhaka, Bangladesh
                 </p>
               </div>
             </div>
 
-            {/* Hire Button */}
+            {/* Button */}
             <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#contact"
-              className="inline-block mt-8 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300"
+              className="inline-block mt-8 px-7 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300"
             >
               Hire Me
             </motion.a>
@@ -158,20 +169,24 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-5">
+
+          {/* Copyright */}
           <div className="text-slate-500 text-sm text-center md:text-left">
-            © {currentYear} Mahamuda Afroz Oishi — All Rights Reserved.
+            © {currentYear} Mahamuda Afroz Oishi. All Rights Reserved.
           </div>
 
+          {/* Right Side */}
           <div className="flex items-center gap-4">
             <p className="text-slate-500 text-sm">
               Built with React & Tailwind CSS
             </p>
 
+            {/* Scroll Button */}
             <motion.button
               onClick={scrollTop}
-              whileHover={{ y: -3 }}
+              whileHover={{ y: -4 }}
               whileTap={{ scale: 0.9 }}
-              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all duration-300"
+              className="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all duration-300"
             >
               <FaArrowUp />
             </motion.button>
