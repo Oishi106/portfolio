@@ -1,270 +1,184 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaArrowUp,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 3000);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com/Oishi106', label: 'GitHub', color: 'hover:text-white' },
-    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/mahmuda-afroz-/', label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-sky-400' },
-    { icon: FaEnvelope, href: 'mailto:mahmudaoishi457@gmail.com', label: 'Email', color: 'hover:text-red-400' }
+    {
+      icon: FaGithub,
+      link: "https://github.com/Oishi106",
+    },
+    {
+      icon: FaLinkedin,
+      link: "https://www.linkedin.com/in/mahmuda-afroz-/",
+    },
+    {
+      icon: FaFacebook,
+      link: "https://facebook.com",
+    },
   ];
 
-  const quickLinks = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
-  const resources = ['Documentation', 'Blog', 'Portfolio', 'Resume'];
-  const legal = ['Privacy Policy', 'Terms of Service', 'Cookie Policy'];
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.6 }}
-      className="w-full bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-t border-slate-800 text-slate-300"
-    >
-      {/* Top Decorative Line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+    <footer className="relative overflow-hidden bg-[#020617] border-t border-white/10">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full top-[-100px] left-[-100px]" />
+        <div className="absolute w-72 h-72 bg-blue-500/10 blur-3xl rounded-full bottom-[-100px] right-[-100px]" />
+      </div>
 
-      {/* Main Footer Content */}
-      <div className="w-full px-4">
-        <div className="max-w-7xl mx-auto py-16 lg:py-20">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-16">
+        {/* Top Section */}
+        <div className="grid lg:grid-cols-3 gap-12 pb-14 border-b border-white/10">
           
-          {/* Top Section: Branding & Newsletter */}
+          {/* Brand */}
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 pb-12 border-b border-slate-800"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            {/* Brand Section */}
-            <motion.div variants={itemVariants}>
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-3">
-                Mahamuda Afroz
-              </h2>
-              <p className="text-slate-400 mb-6 leading-relaxed">
-                Full Stack Developer crafting beautiful and functional web experiences. Let's build something amazing together.
-              </p>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => {
-                  const Icon = social.icon;
-                  return (
-                    <motion.a
-                      key={index}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ y: -5, scale: 1.15 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`w-11 h-11 rounded-full bg-slate-800 hover:bg-cyan-500/20 flex items-center justify-center text-cyan-400 transition-all duration-300 ${social.color}`}
-                      title={social.label}
-                    >
-                      <Icon className="text-lg" />
-                    </motion.a>
-                  );
-                })}
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Mahamuda Afroz <span className="text-cyan-400">Oishi</span>
+            </h2>
+
+            <p className="text-slate-400 leading-relaxed mb-6">
+              Passionate Full Stack Developer creating modern, responsive and
+              user-friendly web applications with beautiful UI & smooth user
+              experience.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-4">
+              {socialLinks.map((social, i) => {
+                const Icon = social.icon;
+
+                return (
+                  <motion.a
+                    key={i}
+                    href={social.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={{ y: -5 }}
+                    className="w-11 h-11 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all duration-300"
+                  >
+                    <Icon />
+                  </motion.a>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Navigation */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:mx-auto"
+          >
+            <h3 className="text-xl font-semibold text-white mb-6">
+              Navigation
+            </h3>
+
+            <div className="grid grid-cols-2 gap-4">
+              {navLinks.map((item, i) => (
+                <a
+                  key={i}
+                  href={item.href}
+                  className="text-slate-400 hover:text-cyan-400 transition-all duration-300 hover:translate-x-1"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <h3 className="text-xl font-semibold text-white mb-6">
+              Contact
+            </h3>
+
+            <div className="space-y-5">
+              <div className="flex items-start gap-3">
+                <FaEnvelope className="text-cyan-400 mt-1" />
+                <a
+                  href="mailto:mahmudaoishi457@gmail.com"
+                  className="text-slate-400 hover:text-cyan-400 transition-all"
+                >
+                  mahmudaoishi457@gmail.com
+                </a>
               </div>
-            </motion.div>
 
-            {/* Newsletter Section */}
-            <motion.div variants={itemVariants} className="md:pl-6">
-              <h3 className="text-xl font-bold text-slate-100 mb-4">Stay Updated</h3>
-              <p className="text-slate-400 text-sm mb-6">Subscribe to get latest updates about my projects and insights.</p>
-              <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
-                <div className="flex gap-2">
-                  <input
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
-                    required
-                  />
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    type="submit"
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-lg transition-all"
-                  >
-                    Subscribe
-                  </motion.button>
-                </div>
-                {subscribed && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-green-400 text-sm"
-                  >
-                    ✓ Thanks for subscribing!
-                  </motion.p>
-                )}
-              </form>
-            </motion.div>
+              <div className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-cyan-400 mt-1" />
+                <p className="text-slate-400">
+                  Dhaka, Bangladesh
+                </p>
+              </div>
+            </div>
+
+            {/* Hire Button */}
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#contact"
+              className="inline-block mt-8 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300"
+            >
+              Hire Me
+            </motion.a>
           </motion.div>
+        </div>
 
-          {/* Middle Section: Links & Contact */}
-          <motion.div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12 pb-12 border-b border-slate-800">
-            
-            {/* Quick Links */}
-            <motion.div
-              variants={itemVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-            >
-              <h4 className="text-lg font-semibold text-slate-100 mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <motion.a
-                      href={`#${link.toLowerCase()}`}
-                      whileHover={{ x: 4 }}
-                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 inline-flex items-center group"
-                    >
-                      <span className="inline-block w-0 h-0.5 bg-cyan-400 mr-2 group-hover:w-2 transition-all duration-300"></span>
-                      {link}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+        {/* Bottom */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-5">
+          <div className="text-slate-500 text-sm text-center md:text-left">
+            © {currentYear} Mahamuda Afroz Oishi — All Rights Reserved.
+          </div>
 
-            {/* Resources */}
-            <motion.div
-              variants={itemVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-            >
-              <h4 className="text-lg font-semibold text-slate-100 mb-6">Resources</h4>
-              <ul className="space-y-3">
-                {resources.map((link, index) => (
-                  <li key={index}>
-                    <motion.a
-                      href="#"
-                      whileHover={{ x: 4 }}
-                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 inline-flex items-center group"
-                    >
-                      <span className="inline-block w-0 h-0.5 bg-cyan-400 mr-2 group-hover:w-2 transition-all duration-300"></span>
-                      {link}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Legal */}
-            <motion.div
-              variants={itemVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-            >
-              <h4 className="text-lg font-semibold text-slate-100 mb-6">Legal</h4>
-              <ul className="space-y-3">
-                {legal.map((link, index) => (
-                  <li key={index}>
-                    <motion.a
-                      href="#"
-                      whileHover={{ x: 4 }}
-                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 inline-flex items-center group"
-                    >
-                      <span className="inline-block w-0 h-0.5 bg-cyan-400 mr-2 group-hover:w-2 transition-all duration-300"></span>
-                      {link}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Contact Info */}
-            <motion.div
-              variants={itemVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-              className="md:col-span-2"
-            >
-              <h4 className="text-lg font-semibold text-slate-100 mb-6">Get In Touch</h4>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <FaEnvelope className="text-cyan-400 mt-1 flex-shrink-0 text-base" />
-                  <a href="mailto:mahmudaoishi457@gmail.com" className="text-slate-400 hover:text-cyan-400 transition-colors break-all">
-                    mahmudaoishi457@gmail.com
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaPhone className="text-cyan-400 mt-1 flex-shrink-0 text-base" />
-                  <a href="tel:+1234567890" className="text-slate-400 hover:text-cyan-400 transition-colors">
-                    +1 (234) 567-890
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaMapMarkerAlt className="text-cyan-400 mt-1 flex-shrink-0 text-base" />
-                  <span className="text-slate-400">Your City, Country</span>
-                </li>
-              </ul>
-            </motion.div>
-          </motion.div>
-
-          {/* Bottom Section: Copyright & Scroll Top */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: false }}
-              transition={{ delay: 0.3 }}
-              className="text-center md:text-left text-slate-500 text-sm"
-            >
-              <p>&copy; {new Date().getFullYear()} Mahamuda Afroz Oishi. All rights reserved.</p>
-              <p className="text-xs text-slate-600 mt-2">Designed & Built with <span className="text-red-400">❤</span> by Mahamuda Afroz</p>
-            </motion.div>
+          <div className="flex items-center gap-4">
+            <p className="text-slate-500 text-sm">
+              Built with React & Tailwind CSS
+            </p>
 
             <motion.button
-              onClick={scrollToTop}
-              whileHover={{ y: -3, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-6 py-2 bg-slate-800 hover:bg-cyan-500/20 rounded-lg text-slate-400 hover:text-cyan-400 transition-all duration-300 group"
+              onClick={scrollTop}
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all duration-300"
             >
-              Back to Top
-              <FaArrowUp className="group-hover:-translate-y-1 transition-transform" />
+              <FaArrowUp />
             </motion.button>
           </div>
         </div>
       </div>
-
-      {/* Bottom Decorative Line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
-    </motion.footer>
+    </footer>
   );
 };
 
