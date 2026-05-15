@@ -43,13 +43,21 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#020617] border-t border-white/10">
+    <footer className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden bg-gradient-to-b from-[#0a0e27] via-[#020617] to-black border-t border-cyan-500/20">
       
-      {/* Background Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full -top-32 -left-32"></div>
+      {/* Grid Pattern Background */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,200,255,0.05)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,200,255,0.05)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+      </div>
 
-        <div className="absolute w-80 h-80 bg-blue-500/10 blur-3xl rounded-full -bottom-32 -right-32"></div>
+      {/* Background Glow */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute w-96 h-96 bg-cyan-500/15 blur-3xl rounded-full -top-40 -left-40"></div>
+
+        <div className="absolute w-80 h-80 bg-blue-500/12 blur-3xl rounded-full -bottom-32 -right-32"></div>
+        
+        <div className="absolute w-72 h-72 bg-cyan-500/8 blur-2xl rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
       </div>
 
       {/* Main Content */}
