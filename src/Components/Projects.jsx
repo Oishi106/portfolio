@@ -29,7 +29,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Local Food',
+      title: 'LocalNest – Food Lovers Network',
       description: 'Local Food Lovers Network is a full-stack web application designed for food enthusiasts who enjoy exploring restaurants, street foods, and homemade dishes. Users can register, post reviews, manage their favorites, and view reviews from others in an engaging and responsive UI.',
       link: 'https://local-food-client.vercel.app/',                  
       tags: ['MERN', 'Firebase', 'Tailwind'],
@@ -37,11 +37,11 @@ const Projects = () => {
     },
      {
       id: 4,
-      title: 'Skill-exchange',                                 
+      title: 'Skill-swap – Skill Sharing Platform',                                 
       description: 'The purpose of SkillSwap is to connect learners with local skill providers. Whether it’s guitar lessons, language practice, coding help, or yoga sessions, SkillSwap helps users find the right skill provider and book a session easily.',
       link: 'https://mellow-otter-666845.netlify.app/',
       tags: ['React', 'Node.js', 'MongoDB'],
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop'
+      image: 'skill-swap.png'
     },   
    
   ];
