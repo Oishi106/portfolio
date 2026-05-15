@@ -29,7 +29,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'LocalNest – Food Lovers Network',
+      title: 'FoodNest – Food Lovers Network',
       description: 'Local Food Lovers Network is a full-stack web application designed for food enthusiasts who enjoy exploring restaurants, street foods, and homemade dishes. Users can register, post reviews, manage their favorites, and view reviews from others in an engaging and responsive UI.',
       link: 'https://local-food-client.vercel.app/',                  
       tags: ['MERN', 'Firebase', 'Tailwind'],
