@@ -46,9 +46,9 @@ function Hero() {
               className="rounded-full bg-cyan-400 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-400/40 transition hover:bg-cyan-300"
             >
               Download Resume
-            </motion.a>
+            </motion.a>                            
             <span className="text-xs font-medium uppercase tracking-[0.25em] text-emerald-300/80">
-              AVAILABLE FOR OPPORTUNITIES
+              AVAILABLE FOR OPPORTUNITIES                             
             </span>
           </div>
         </motion.div>
