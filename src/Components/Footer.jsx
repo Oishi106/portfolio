@@ -45,14 +45,14 @@ const Footer = () => {
   return (
     <footer className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden bg-gradient-to-b from-[#0a0e27] via-[#020617] to-black border-t border-cyan-500/20">
       
-      {/* Grid Pattern Background */}
+      {/* Grid Pattern Background */}                   
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,200,255,0.05)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,200,255,0.05)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
       </div>
 
       {/* Background Glow */}
-      <div className="absolute inset-0 opacity-40">
+      <div className="absolute inset-0 opacity-40">                                                       
         <div className="absolute w-96 h-96 bg-cyan-500/15 blur-3xl rounded-full -top-40 -left-40"></div>
 
         <div className="absolute w-80 h-80 bg-blue-500/12 blur-3xl rounded-full -bottom-32 -right-32"></div>
