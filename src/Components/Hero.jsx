@@ -1,19 +1,13 @@
 import profileImg from '../assets/original.jpeg'
-import { motion } from 'framer-motion';
 
-const cvDownloadUrl = 'https://drive.google.com/uc?export=download&id=1Hobo2EirWb1P00-CCLK2Zk-2o0E_FQ98';
+const cvViewUrl = 'https://drive.google.com/file/d/1Hobo2EirWb1P00-CCLK2Zk-2o0E_FQ98/view?usp=sharing';
 
 function Hero() {
   return (
     <main id="home" className="relative z-10 mt-16 px-4 md:px-8 overflow-hidden">
       <section className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-12 md:flex-row">
         {/* Left: text content */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <div 
           className="max-w-xl space-y-6 text-slate-50 text-center md:text-left"
         >
           <p className="mt-20 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
@@ -22,7 +16,7 @@ function Hero() {
 
           <div className="space-y-2">
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-7xl">
-              <span className="bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient-x inline-block">
+              <span className="bg-linear-to-r from-cyan-300 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient-x inline-block">
                 MAHAMUDA AFROZ
               </span>
             </h1>
@@ -36,30 +30,22 @@ function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href={cvDownloadUrl}
-              download
+            <a
+              href={cvViewUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-cyan-400 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-400/40 transition hover:bg-cyan-300"
             >
               Download Resume
-            </motion.a>                            
+            </a>                            
             <span className="text-xs font-medium uppercase tracking-[0.25em] text-emerald-300/80">
               AVAILABLE FOR OPPORTUNITIES                             
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Right: profile image with outer orbit */}
-       <motion.section 
-         initial={{ opacity: 0, scale: 0.8 }}
-         whileInView={{ opacity: 1, scale: 1 }}
-         exit={{ opacity: 0, scale: 0.8 }}
-         viewport={{ once: false, amount: 0.5 }}
-         transition={{ duration: 0.8, delay: 0.2 }}
+       <section 
          className="mt-10 flex flex-1 justify-center md:mt-0"
        >
         <div className="hero-orbit-container relative flex items-center justify-center">
@@ -80,7 +66,7 @@ function Hero() {
             />
           </div>
         </div>
-       </motion.section>
+       </section>
       </section>
     </main>
   );
