@@ -50,8 +50,8 @@ function Hero() {
        >
         <div className="hero-orbit-container relative flex items-center justify-center">
           {/* Orbital animation dots */}
-          <div className="hero-orbit-track absolute animate-spin-slow">
-            <div className="hero-orbit-dot hero-orbit-dot-1" />
+          <div className="hero-orbit-track absolute animate-spin-slow">             
+            <div className="hero-orbit-dot hero-orbit-dot-1" />             
             <div className="hero-orbit-dot hero-orbit-dot-2" />
             <div className="hero-orbit-dot hero-orbit-dot-3" />
           </div>
